@@ -35,7 +35,9 @@ Project Structure
 
 Dashboard
 
-Looker Studio dashboard: Add your dashboard link here.
+Live Dashboard
+
+"Open CareFlow Clinical Pathway Analytics" (https://datastudio.google.com/reporting/548e1c3e-fbfb-4992-bd7f-db9c6ecef44a)
 
 Data Privacy
 
