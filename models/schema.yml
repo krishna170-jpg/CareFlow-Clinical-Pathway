@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: stg_careflow_events
+    description: "Cleaned and standardized clinical event records"
+    columns:
+      - name: case_id
+        tests:
+          - not_null
+      - name: activity
+        tests:
+          - not_null
+
+  - name: fct_careflow_cases
+    description: "One record per case with duration and activity metrics"
+    columns:
+      - name: case_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_careflow_pathways
+    description: "Aggregated transitions between clinical activities"
+    columns:
+      - name: from_activity
+        tests:
+          - not_null
+      - name: to_activity
+        tests:
+          - not_null
+          
