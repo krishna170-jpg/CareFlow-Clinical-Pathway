@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CareFlow | Clinical Pathway Process Mining</title>
+<style>
+:root{--navy:#102b4e;--blue:#1677e8;--pale:#edf5ff;--teal:#17a6a1;--ink:#132b4c;--muted:#657995;--line:#dce6f2;--bg:#f5f8fc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,Arial,sans-serif}header{height:72px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:15px;padding:0 22px}.logo{background:linear-gradient(135deg,#24c4df,#1469d5);color:#fff;border-radius:12px;padding:9px 12px;font-size:24px}.brand strong{font-size:24px;color:#0878df}.brand small{display:block;color:var(--muted);font-size:12px}.search{margin:auto;width:min(42%,520px);border:1px solid var(--line);padding:10px 13px;border-radius:9px;color:var(--muted)}.layout{display:grid;grid-template-columns:225px 1fr;min-height:calc(100vh - 72px)}aside{background:linear-gradient(#15375e,#10243f);padding:15px 10px}.nav{display:block;color:#edf4ff;text-decoration:none;padding:11px;border-radius:8px;margin:3px 0}.nav.active,.nav:hover{background:#1677d9}.navheading{color:#9eb4d0;font-size:11px;text-transform:uppercase;padding:18px 10px 5px;border-top:1px solid #49617b;margin-top:12px}main{padding:20px;min-width:0}.hero{background:linear-gradient(110deg,#e8f3ff,#f4fbff 65%,#e5faf8);border:1px solid #dcecff;border-radius:13px;padding:24px;display:flex;justify-content:space-between;gap:18px;align-items:center}.hero h1{margin:0 0 7px;font-size:28px}.hero p{margin:0;color:#3e5b7c}.flow{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.stage{background:#fff;border:1px solid #b8ddf4;border-radius:9px;padding:11px;text-align:center;color:#1268c5;font-size:12px}.arrow{color:var(--teal)}.notice{margin:14px 0;background:#fff9e9;border:1px solid #f0dfad;border-radius:9px;padding:12px;color:#76581a;font-size:13px}.sectionhead{margin:20px 0 10px}.sectionhead h2{margin:0;font-size:18px}.muted{color:var(--muted);font-size:13px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card,.panel{background:#fff;border:1px solid var(--line);border-radius:11px;padding:16px;min-width:0}.card h3{font-size:14px;margin:0 0 8px}.metric{font-size:22px;font-weight:750;margin:8px 0}.grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:13px;margin-top:13px}.panel h2{font-size:16px;margin:0 0 7px}.button{display:inline-block;background:var(--blue);color:white;padding:10px 13px;border-radius:8px;text-decoration:none;font-weight:650}.button.secondary{background:#eaf3ff;color:#1268c5}.embed{width:100%;height:650px;border:1px solid var(--line);border-radius:8px;background:#f7faff}.embedhelp{padding:22px;text-align:center;color:var(--muted)}.foot{padding:22px 0;color:#74859b;font-size:12px}[hidden]{display:none!important}
+@media(max-width:950px){.hero{display:block}.flow{margin-top:18px}.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+@media(max-width:650px){header{padding:0 12px}.brand strong{font-size:21px}.brand small,.search{display:none}.layout{grid-template-columns:1fr}aside{display:flex;overflow:auto;position:sticky;top:0;z-index:3;padding:6px;gap:4px}.nav{white-space:nowrap;padding:9px;font-size:13px}.navheading{display:none}main{padding:11px}.hero{padding:18px}.hero h1{font-size:24px}.cards{gap:8px}.card,.panel{padding:12px}.metric{font-size:18px}.embed{height:560px}}
+</style></head>
+<body>
+<header><div class="logo">♥</div><div class="brand"><strong>CareFlow</strong><small>Clinical Pathway Process Mining</small></div><div class="search">⌕ &nbsp; Search cases, activities, departments…</div></header>
+<div class="layout"><aside>
+<a class="nav active" href="#dashboard" data-section="dashboard">⌂ &nbsp; Dashboard</a>
+<a class="nav" href="#task-board" data-section="task-board">☑ &nbsp; Task Board</a>
+<a class="nav" href="#reports" data-section="reports">▥ &nbsp; Reports</a>
+<a class="nav" href="#care-coordination" data-section="care-coordination">♧ &nbsp; Care Coordination</a>
+<a class="nav" href="#patient-flow" data-section="patient-flow">⌁ &nbsp; Patient Flow</a>
+<a class="nav" href="#clinical-pathways" data-section="clinical-pathways">♧ &nbsp; Clinical Pathways</a>
+<a class="nav" href="#care-teams" data-section="care-teams">♙ &nbsp; Care Teams</a>
+<a class="nav" href="#governance" data-section="governance">⬡ &nbsp; Governance</a>
+<div class="navheading">Departments</div><a class="nav" href="#departments" data-section="departments">✚ &nbsp; Department Analytics</a>
+</aside><main>
+<section id="dashboard" class="view">
+<div class="hero"><div><h1>Welcome to CareFlow</h1><p>Turn your existing clinical event data into pathway insights. Explore case activity, duration, and transitions with BigQuery and dbt.</p></div><div class="flow"><div class="stage">Admission</div><span class="arrow">→</span><div class="stage">Diagnosis</div><span class="arrow">→</span><div class="stage">Treatment</div><span class="arrow">→</span><div class="stage">Discharge</div></div></div>
+<div class="notice"><b>Real data only:</b> no sample metrics are included. Connect your existing Looker Studio report below, or connect a secure backend to query BigQuery. GitHub Pages must not contain cloud credentials.</div>
+<div class="sectionhead"><h2>Clinical analytics workspace</h2><span class="muted">Existing CareFlow datasets</span></div>
+<div class="cards">
+<div class="card"><h3>Total Cases</h3><div class="metric">—</div><p class="muted">Waiting for live report connection</p></div>
+<div class="card"><h3>Total Events</h3><div class="metric">—</div><p class="muted">Calculated from actual event records</p></div>
+<div class="card"><h3>Average Case Duration</h3><div class="metric">—</div><p class="muted">Minutes from case analytics</p></div>
+<div class="card"><h3>Pathway Transitions</h3><div class="metric">—</div><p class="muted">From dbt pathway model</p></div></div>
+<div class="grid2"><div class="panel"><h2>CareFlow live dashboard</h2><p class="muted">Embed your existing Looker Studio report to show actual BigQuery-backed charts.</p><div id="embedPlaceholder" class="embedhelp">Looker Studio has not been connected in this file yet.<br><br>Replace <code>LOOKER_STUDIO_EMBED_URL</code> in this file with the report's embed URL.<br><br><a class="button" href="https://lookerstudio.google.com/" target="_blank" rel="noopener">Open Looker Studio</a></div><iframe id="lookerFrame" class="embed" title="CareFlow Looker Studio dashboard" hidden loading="lazy"></iframe></div>
+<div class="panel"><h2>Connected data sources</h2><p class="muted">Models already configured in your project.</p>
+<div class="card"><h3>Raw BigQuery events</h3><code>careflow_raw.raw_careflow_event_log</code><p class="muted">Project: careflow-analytics-511316</p></div><br>
+<div class="card"><h3>dbt staging view</h3><code>careflow_dbt.stg_careflow_events</code></div><br>
+<div class="card"><h3>Case analytics table</h3><code>careflow_dbt.fct_careflow_cases</code></div><br>
+<div class="card"><h3>Pathway analytics table</h3><code>careflow_dbt.fct_careflow_pathways</code></div></div></div>
+</section>
+<section id="task-board" class="view" hidden><div class="hero"><div><h1>Task Board</h1><p>Track pathway review tasks and follow-ups.</p></div></div><div class="notice">No task database has been connected, so no task records are shown.</div></section>
+<section id="reports" class="view" hidden><div class="hero"><div><h1>Reports</h1><p>Open your existing Looker Studio reports backed by BigQuery.</p><a class="button" href="https://lookerstudio.google.com/" target="_blank" rel="noopener">Open Looker Studio</a></div></div></section>
+<section id="care-coordination" class="view" hidden><div class="hero"><div><h1>Care Coordination</h1><p>Coordinate pathway reviews across teams.</p></div></div><div class="notice">Connect an authorized coordination source before displaying assignments or tasks.</div></section>
+<section id="patient-flow" class="view" hidden><div class="hero"><div><h1>Patient Flow</h1><p>Analyze case start/end times, event counts, and elapsed duration.</p></div></div><div class="panel"><h2>Source</h2><code>careflow-analytics-511316.careflow_dbt.fct_careflow_cases</code></div></section>
+<section id="clinical-pathways" class="view" hidden><div class="hero"><div><h1>Clinical Pathways</h1><p>Review transitions between consecutive activities from your dbt pathway model.</p></div></div><div class="panel"><h2>Source</h2><code>careflow-analytics-511316.careflow_dbt.fct_careflow_pathways</code></div></section>
+<section id="care-teams" class="view" hidden><div class="hero"><div><h1>Care Teams</h1><p>Care team directory and assignments require a dedicated authorized source.</p></div></div><div class="notice">No fabricated staff names or assignments are shown.</div></section>
+<section id="governance" class="view" hidden><div class="hero"><div><h1>Governance</h1><p>Review data quality, access control, and reporting safeguards.</p></div></div><div class="cards"><div class="card"><h3>Data quality</h3><p>Use dbt tests in <code>models/schema.yml</code>.</p></div><div class="card"><h3>Access control</h3><p>Keep cloud credentials out of GitHub.</p></div><div class="card"><h3>Privacy</h3><p>Share only approved, appropriately de-identified aggregates.</p></div><div class="card"><h3>Traceability</h3><p>Version SQL models and documentation in GitHub.</p></div></div></section>
+<section id="departments" class="view" hidden><div class="hero"><div><h1>Department Analytics</h1><p>Department breakdowns require a confirmed department dimension in the source data.</p></div></div><div class="notice">No department counts are invented. Connect a validated department field or report.</div></section>
+<div class="foot">CareFlow • Clinical Pathway Process Mining • Existing BigQuery/dbt assets • No patient-level records or sample metrics embedded.</div>
+</main></div>
+<script>
+const links=[...document.querySelectorAll('.nav[data-section]')],views=[...document.querySelectorAll('.view')];
+links.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.dataset.section;views.forEach(v=>v.hidden=v.id!==id);links.forEach(x=>x.classList.toggle('active',x===a));history.replaceState(null,'','#'+id);window.scrollTo({top:0,behavior:'smooth'});}));
+const EMBED_URL='LOOKER_STUDIO_EMBED_URL';
+if(EMBED_URL!=='LOOKER_STUDIO_EMBED_URL'){const f=document.getElementById('lookerFrame');f.src=EMBED_URL;f.hidden=false;document.getElementById('embedPlaceholder').hidden=true;}
+</script></body></html>
