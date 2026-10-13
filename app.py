@@ -37,6 +37,7 @@ def find_col(df, hints):
     return None
 
 df, source_name = load_csvs()
+synthetic_department = False
 
 with st.sidebar:
     st.markdown("## ♥ CareFlow")
