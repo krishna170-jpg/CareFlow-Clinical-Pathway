@@ -45,6 +45,7 @@ with st.sidebar:
     st.divider()
     st.caption("Clinical Pathway Process Mining")
     st.caption("Data source: " + source_name)
+    synthetic_department = False
     if synthetic_department:
         st.caption("Department labels are synthetic demo assignments; the source file has no department field.")
 
