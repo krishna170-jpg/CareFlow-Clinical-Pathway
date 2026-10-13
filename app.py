@@ -17,17 +17,24 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+
 def load_csvs():
-    candidates = [Path("careflow_event_log.csv"), Path("event_log_ED_MMA_2026.csv"), Path("sample_event_log.csv")]
-    for p in candidates:
-        if p.exists():
+    candidates = [
+        Path("careflow_event_log.csv"),
+        Path("event_log_ED_MMA_2026.csv"),
+    ]
+
+    for path in candidates:
+        if path.exists():
             try:
-                d = pd.read_csv(p)
-                if not d.empty:
-                    return d, p.name
-            except Exception:
-                pass
-    return pd.DataFrame(), "No CSV found"
+                data = pd.read_csv(path)
+                if not data.empty:
+                    return data, path.name
+            except Exception as exc:
+                st.warning(f"Could not read {path.name}: {exc}")
+
+    return pd.DataFrame(), "No event log found"
+    
 
 def find_col(df, hints):
     for c in df.columns:
@@ -36,7 +43,26 @@ def find_col(df, hints):
             return c
     return None
 
+
 df, source_name = load_csvs()
+
+uploaded_file = st.file_uploader(
+    "Upload your actual event-log CSV",
+    type=["csv"],
+    help="Upload an approved event log. Do not upload identifiable patient data."
+)
+
+if uploaded_file is not None:
+    try:
+        df = pd.read_csv(uploaded_file)
+        source_name = uploaded_file.name
+        if df.empty:
+            st.error("The uploaded CSV contains no records.")
+            st.stop()
+    except Exception as exc:
+        st.error(f"Unable to read the uploaded CSV: {exc}")
+        st.stop()
+        
 synthetic_department = False
 
 with st.sidebar:
