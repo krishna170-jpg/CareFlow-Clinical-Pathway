@@ -5,6 +5,143 @@ from pathlib import Path
 
 st.set_page_config(page_title="CareFlow | Clinical Pathway Process Mining", page_icon="♥", layout="wide")
 
+# ---------- CAREFLOW AUTHENTICATION ----------
+from supabase import create_client
+
+@st.cache_resource
+def get_supabase_client():
+    return create_client(
+        st.secrets["SUPABASE_URL"],
+        st.secrets["SUPABASE_KEY"]
+    )
+
+try:
+    supabase = get_supabase_client()
+except Exception:
+    st.error(
+        "Authentication setup error. Check SUPABASE_URL "
+        "and SUPABASE_KEY in Streamlit Cloud Secrets."
+    )
+    st.stop()
+
+if "careflow_user" not in st.session_state:
+    st.session_state.careflow_user = None
+
+if not st.session_state.careflow_user:
+    st.markdown(
+        """
+        <div style="text-align:center;padding:25px 0">
+            <h1 style="color:#2463a5">♥ CareFlow</h1>
+            <p>Clinical Pathway Process Mining</p>
+            <p>Sign in to access your clinical analytics workspace.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    login_tab, signup_tab = st.tabs(
+        ["Login", "Create account"]
+    )
+
+    with login_tab:
+        with st.form("careflow_login_form"):
+            login_email = st.text_input("Email address")
+            login_password = st.text_input(
+                "Password", type="password"
+            )
+            login_submit = st.form_submit_button(
+                "Login", use_container_width=True
+            )
+
+        if login_submit:
+            try:
+                result = supabase.auth.sign_in_with_password({
+                    "email": login_email.strip(),
+                    "password": login_password
+                })
+
+                if result.session and result.user:
+                    st.session_state.careflow_user = {
+                        "id": result.user.id,
+                        "email": result.user.email
+                    }
+                    st.rerun()
+                else:
+                    st.error("Login unsuccessful. Please try again.")
+
+            except Exception:
+                st.error(
+                    "Login failed. Check your email and password "
+                    "or verify your email address."
+                )
+
+    with signup_tab:
+        with st.form("careflow_signup_form"):
+            signup_email = st.text_input("Email address")
+            signup_password = st.text_input(
+                "Create password", type="password"
+            )
+            confirm_password = st.text_input(
+                "Confirm password", type="password"
+            )
+            signup_submit = st.form_submit_button(
+                "Create account", use_container_width=True
+            )
+
+        if signup_submit:
+            if not signup_email.strip():
+                st.error("Enter your email address.")
+            elif len(signup_password) < 8:
+                st.error("Use a password of at least 8 characters.")
+            elif signup_password != confirm_password:
+                st.error("Passwords do not match.")
+            else:
+                try:
+                    result = supabase.auth.sign_up({
+                        "email": signup_email.strip(),
+                        "password": signup_password
+                    })
+
+                    if result.session and result.user:
+                        st.session_state.careflow_user = {
+                            "id": result.user.id,
+                            "email": result.user.email
+                        }
+                        st.success("Account created successfully.")
+                        st.rerun()
+                    else:
+                        st.success(
+                            "Registration received. Check your email "
+                            "to verify your account, then log in."
+                        )
+
+                except Exception:
+                    st.error(
+                        "Signup failed. Check your email, password "
+                        "requirements, and Supabase authentication settings."
+                    )
+
+    st.stop()
+
+# Authenticated users can access the existing dashboard.
+with st.sidebar:
+    st.caption(
+        "Signed in as: "
+        + str(st.session_state.careflow_user["email"])
+    )
+
+    if st.button("Log out", use_container_width=True):
+        try:
+            supabase.auth.sign_out()
+        except Exception:
+            pass
+
+        st.session_state.careflow_user = None
+        st.rerun()
+
+# ---------- END CAREFLOW AUTHENTICATION ----------
+
+
 st.markdown("""
 <style>
 .block-container{padding-top:1.2rem;max-width:1500px}
