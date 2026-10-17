@@ -168,6 +168,28 @@ st.markdown("""
 .block-container{padding-top:1.2rem;max-width:1500px}
 [data-testid="stSidebar"]{background:linear-gradient(180deg,#102746,#173c62)}
 [data-testid="stSidebar"] *{color:#f7fbff}
+[data-testid="stSidebar"] button {
+    background: #245b8f !important;
+    color: #ffffff !important;
+    border: 1px solid #4b83b5 !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease;
+}
+
+[data-testid="stSidebar"] button:hover {
+    background: #167d91 !important;
+    border-color: #5eead4 !important;
+}
+
+/* Cleaner navigation spacing */
+[data-testid="stSidebar"] [role="radiogroup"] {
+    gap: 6px;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: #355574;
+}
 .hero{padding:1.4rem 1.6rem;border-radius:18px;background:linear-gradient(115deg,#102746,#2463a5);color:#fff;margin-bottom:1rem}
 .hero h1{color:#fff;margin:0;font-size:2rem}.hero p{color:#dbeafe;margin:.35rem 0 0}
 .metric-card{border:1px solid #e1e9f3;border-radius:14px;background:#fff;padding:16px;min-height:105px}
