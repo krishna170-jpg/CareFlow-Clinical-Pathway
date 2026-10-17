@@ -245,21 +245,24 @@ with st.sidebar:
     """,
     unsafe_allow_html=True
 )    
-    page = st.radio(
-    "WORKSPACE",
-    [
-        "Dashboard",
-        "Task Board",
-        "Reports",
-        "Care coordination",
-        "Patient Flow",
-        "Clinical Pathways",
-        "Care Teams",
-        "Governance",
-        "Profile",
-    ],
-)
-    st.divider()
+    with st.expander("☰ Menu", expanded=True):
+        page = st.radio(
+            "CareFlow Navigation",
+            [
+                "Dashboard",
+                "Task Board",
+                "Reports",
+                "Care coordination",
+                "Patient Flow",
+                "Clinical Pathways",
+                "Care Teams",
+                "Governance",
+                "Profile",
+            ],
+            key="careflow_workspace_menu",
+            label_visibility="collapsed",
+        )
+        st.divider()
     st.caption("Clinical Pathway Process Mining")
     st.caption("Data source: " + source_name)
     synthetic_department = False
