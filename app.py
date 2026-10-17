@@ -197,9 +197,22 @@ def find_col(df, hints):
 df, source_name = load_csvs()
 
 with st.sidebar:
-    st.markdown("## ♥ CareFlow")
-    st.caption("Smarter pathways. Better care.")
-    page = st.radio("WORKSPACE", ["Dashboard","Task Board","Reports","Care coordination","Patient Flow","Clinical Pathways","Care Teams","Governance"])
+    st.markdown(
+    """
+    <div style="padding:12px 4px 18px;">
+        <div style="font-size:28px;font-weight:800;color:#ffffff;">
+            ♥ CareFlow
+        </div>
+        <div style="font-size:12px;color:#bfdbfe;margin-top:6px;">
+            CLINICAL ANALYTICS
+        </div>
+        <div style="font-size:13px;color:#e2e8f0;margin-top:8px;">
+            Smarter pathways. Better care.
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)    page = st.radio("WORKSPACE", ["Dashboard","Task Board","Reports","Care coordination","Patient Flow","Clinical Pathways","Care Teams","Governance"])
     st.divider()
     st.caption("Clinical Pathway Process Mining")
     st.caption("Data source: " + source_name)
