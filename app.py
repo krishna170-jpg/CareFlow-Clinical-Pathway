@@ -496,3 +496,83 @@ elif page == "Governance":
 
 st.divider()
 st.caption("CareFlow is a process-mining demonstration, not a clinical decision-support system. Department labels are synthetic where indicated. Do not publish identifiable patient or health data to a public repository.")
+elif page == "Profile":
+    st.subheader("👨‍⚕️ Doctor Profile")
+    st.caption("Professional information and account details")
+
+    user = st.session_state.careflow_user
+    email = user.get("email", "")
+
+    with st.form("doctor_profile_form"):
+        st.markdown("### Personal Information")
+        col1, col2 = st.columns(2)
+
+        with col1:
+            doctor_name = st.text_input("Doctor Name")
+            age = st.number_input(
+                "Age", min_value=18, max_value=100, value=30
+            )
+            gender = st.selectbox(
+                "Gender",
+                ["Prefer not to say", "Female", "Male", "Other"]
+            )
+
+        with col2:
+            department = st.selectbox(
+                "Department",
+                [
+                    "General Medicine", "Emergency", "Cardiology",
+                    "Neurology", "Paediatrics", "Orthopaedics",
+                    "Surgery", "Other"
+                ]
+            )
+            designation = st.selectbox(
+                "Designation",
+                [
+                    "Doctor", "Resident Doctor", "Consultant",
+                    "Senior Consultant", "Department Head", "Other"
+                ]
+            )
+            employee_id = st.text_input("Employee ID (optional)")
+
+        st.markdown("### Contact Information")
+        st.text_input("Account Email", value=email, disabled=True)
+        contact_no = st.text_input("Contact Number")
+        hospital = st.text_input("Hospital / Healthcare Facility")
+        location = st.text_input("City / Location")
+
+        st.markdown("### Professional Information")
+        qualification = st.text_input("Medical Qualification")
+        specialization = st.text_input("Specialization")
+        experience = st.number_input(
+            "Years of Experience", min_value=0, max_value=70, value=0
+        )
+        bio = st.text_area("Professional Bio")
+
+        submitted = st.form_submit_button(
+            "Save Profile", use_container_width=True
+        )
+
+    if submitted:
+        st.session_state["careflow_doctor_profile"] = {
+            "Doctor Name": doctor_name,
+            "Age": age,
+            "Gender": gender,
+            "Department": department,
+            "Designation": designation,
+            "Employee ID": employee_id,
+            "Email": email,
+            "Contact Number": contact_no,
+            "Hospital": hospital,
+            "Location": location,
+            "Qualification": qualification,
+            "Specialization": specialization,
+            "Experience": experience,
+            "Bio": bio,
+        }
+        st.success("Profile saved for this session.")
+        st.info(
+            "Profile details are temporary and will not persist "
+            "after the session ends. Permanent storage is not "
+            "configured yet."
+        )
