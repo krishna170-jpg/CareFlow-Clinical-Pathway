@@ -28,17 +28,40 @@ if "careflow_user" not in st.session_state:
     st.session_state.careflow_user = None
 
 if not st.session_state.careflow_user:
-    st.markdown(
-        """
-        <div style="text-align:center;padding:25px 0">
-            <h1 style="color:#2463a5">♥ CareFlow</h1>
-            <p>Clinical Pathway Process Mining</p>
-            <p>Sign in to access your clinical analytics workspace.</p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
+    ```python
+st.markdown(
+    """
+    <div style="
+        text-align:center;
+        padding:32px 20px;
+        margin:10px 0 24px;
+        background:linear-gradient(135deg,#102746,#2463a5);
+        border-radius:20px;
+        box-shadow:0 8px 24px rgba(16,39,70,0.16);
+    ">
+        <div style="
+            font-size:42px;
+            font-weight:800;
+            color:#ffffff;
+            letter-spacing:-1px;
+        ">♥ CareFlow</div>
+        <div style="
+            color:#dbeafe;
+            font-size:17px;
+            font-weight:600;
+            margin-top:8px;
+        ">Clinical Pathway Process Mining</div>
+        <div style="
+            color:#ffffff;
+            font-size:14px;
+            margin-top:14px;
+            line-height:1.6;
+        ">Sign in to access your clinical analytics workspace.</div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+```
     login_tab, signup_tab = st.tabs(
         ["Login", "Create account"]
     )
