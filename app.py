@@ -494,8 +494,6 @@ elif page == "Governance":
     if time_col: st.info(f"Detected timestamp field: {time_col}")
     else: st.warning("Timestamp column was not detected automatically.")
 
-st.divider()
-st.caption("CareFlow is a process-mining demonstration, not a clinical decision-support system. Department labels are synthetic where indicated. Do not publish identifiable patient or health data to a public repository.")
 
 elif page == "Profile":
     st.subheader("👨‍⚕️ Doctor Profile")
@@ -577,3 +575,5 @@ elif page == "Profile":
             "after the session ends. Permanent storage is not "
             "configured yet."
         )
+st.divider()
+st.caption("CareFlow is a process-mining demonstration, not a clinical decision-support system. Department labels are synthetic where indicated. Do not publish identifiable patient or health data to a public repository.")
