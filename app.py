@@ -293,8 +293,34 @@ if page == "Dashboard":
     else:
         dashboard_data = filtered.copy()
 
-    filtered = dashboard_data
-    n_events = len(filtered)
+    # Optional date-range filter for clinical event analytics
+    if time_col:
+        dashboard_data[time_col] = pd.to_datetime(
+            dashboard_data[time_col], errors="coerce"
+        )
+        valid_dates = dashboard_data[time_col].dropna()
+
+        if not valid_dates.empty:
+            min_date = valid_dates.min().date()
+            max_date = valid_dates.max().date()
+
+            date_range = st.date_input(
+                "Filter by event date",
+                value=(min_date, max_date),
+                min_value=min_date,
+                max_value=max_date,
+                key="dashboard_date_filter",
+            )
+
+            if isinstance(date_range, (tuple, list)) and len(date_range) == 2:
+                start_date, end_date = date_range
+                dashboard_data = dashboard_data[
+                    dashboard_data[time_col].dt.date.between(
+                        start_date, end_date
+                    )
+                ]
+
+    filtered = dashboard_data    n_events = len(filtered)
     n_cases = filtered[case_col].nunique() if case_col else 0
     n_activities = (
         filtered[activity_col].nunique() if activity_col else 0
