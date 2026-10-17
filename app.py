@@ -320,7 +320,8 @@ if page == "Dashboard":
                     )
                 ]
 
-    filtered = dashboard_data    n_events = len(filtered)
+    filtered = dashboard_data
+    n_events = len(filtered)
     n_cases = filtered[case_col].nunique() if case_col else 0
     n_activities = (
         filtered[activity_col].nunique() if activity_col else 0
