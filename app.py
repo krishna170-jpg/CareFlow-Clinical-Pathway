@@ -28,7 +28,7 @@ if "careflow_user" not in st.session_state:
     st.session_state.careflow_user = None
 
 if not st.session_state.careflow_user:
-st.markdown(
+    st.markdown(
     """
     <div style="
         text-align:center;
