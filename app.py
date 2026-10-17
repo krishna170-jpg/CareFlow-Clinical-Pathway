@@ -496,6 +496,7 @@ elif page == "Governance":
 
 st.divider()
 st.caption("CareFlow is a process-mining demonstration, not a clinical decision-support system. Department labels are synthetic where indicated. Do not publish identifiable patient or health data to a public repository.")
+
 elif page == "Profile":
     st.subheader("👨‍⚕️ Doctor Profile")
     st.caption("Professional information and account details")
