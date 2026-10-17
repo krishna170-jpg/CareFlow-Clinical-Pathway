@@ -213,7 +213,20 @@ with st.sidebar:
     """,
     unsafe_allow_html=True
 )    
-    page = st.radio("WORKSPACE", ["Dashboard","Task Board","Reports","Care coordination","Patient Flow","Clinical Pathways","Care Teams","Governance"])
+    page = st.radio(
+    "WORKSPACE",
+    [
+        "Dashboard",
+        "Task Board",
+        "Reports",
+        "Care coordination",
+        "Patient Flow",
+        "Clinical Pathways",
+        "Care Teams",
+        "Governance",
+        "Profile",
+    ],
+)
     st.divider()
     st.caption("Clinical Pathway Process Mining")
     st.caption("Data source: " + source_name)
