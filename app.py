@@ -268,7 +268,40 @@ n_activities = filtered[activity_col].nunique() if activity_col else 0
 n_departments = filtered[dept_col].nunique() if dept_col else 0
 
 if page == "Dashboard":
-    st.subheader("Operational snapshot")
+    st.subheader("Clinical analytics overview")
+    st.caption("Explore event activity in the currently selected dataset.")
+
+    if activity_col:
+        activity_options = sorted(
+            filtered[activity_col]
+            .dropna()
+            .astype(str)
+            .unique()
+            .tolist()
+        )
+        selected_activities = st.multiselect(
+            "Filter by activity",
+            options=activity_options,
+            default=activity_options,
+            key="dashboard_activity_filter"
+        )
+        dashboard_data = filtered[
+            filtered[activity_col].fillna("Unknown").astype(str).isin(
+                selected_activities
+            )
+        ]
+    else:
+        dashboard_data = filtered.copy()
+
+    filtered = dashboard_data
+    n_events = len(filtered)
+    n_cases = filtered[case_col].nunique() if case_col else 0
+    n_activities = (
+        filtered[activity_col].nunique() if activity_col else 0
+    )
+    n_departments = (
+        filtered[dept_col].nunique() if dept_col else 0
+    )
     m = st.columns(4)
     cards = [
         ("Cases / patients", f"{n_cases:,}"),
