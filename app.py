@@ -60,7 +60,6 @@ if not st.session_state.careflow_user:
     """,
     unsafe_allow_html=True
 )
-```
     login_tab, signup_tab = st.tabs(
         ["Login", "Create account"]
     )
