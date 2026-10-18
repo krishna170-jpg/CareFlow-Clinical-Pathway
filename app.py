@@ -148,14 +148,17 @@ if not st.session_state.careflow_user:
 with st.sidebar:
     st.markdown(
         """
-        <div style="font-size:22px;font-weight:800;
-                    color:#ffffff;padding:8px 0 16px;">
+        <div style="
+            font-size:22px;
+            font-weight:800;
+            color:#17365d;
+            padding:8px 0 16px;
+        ">
             ☰ CareFlow
         </div>
         """,
         unsafe_allow_html=True,
     )
-
     st.caption(
         "Signed in as: "
         + str(st.session_state.careflow_user["email"])
