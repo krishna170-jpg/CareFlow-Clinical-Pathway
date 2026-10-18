@@ -199,10 +199,19 @@ st.markdown("""
     background: linear-gradient(180deg, #f5f8fc 0%, #ffffff 340px);
 }
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #0d2039 0%, #143b61 60%, #155e75 100%);
+    background: linear-gradient(
+        180deg,
+        #0d2039 0%,
+        #143b61 60%,
+        #155e75 100%
+    ) !important;
     border-right: 1px solid rgba(255,255,255,.08);
 }
-[data-testid="stSidebar"] * { color: #f7fbff; }
+
+[data-testid="stSidebar"] * {
+    color: #f7fbff;
+}
+
 [data-testid="stSidebar"] button {
     background: rgba(255,255,255,.09) !important;
     color: #fff !important;
@@ -211,14 +220,24 @@ st.markdown("""
     font-weight: 650 !important;
     transition: all .18s ease;
 }
+
 [data-testid="stSidebar"] button:hover {
     background: rgba(20,184,166,.22) !important;
     border-color: #5eead4 !important;
 }
-[data-testid="stSidebar"] [role="radiogroup"] { gap: 7px; }
-[data-testid="stSidebar"] hr { border-color: rgba(255,255,255,.18); }
+
+[data-testid="stSidebar"] [role="radiogroup"] {
+    gap: 7px;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: rgba(255,255,255,.18);
+}
+
 [data-testid="stSidebar"] [data-testid="stRadio"] label {
-    padding-top: .2rem;
+    font-weight: 600;
+}
+padding-top: .2rem;
     padding-bottom: .2rem;
 }
 .hero {
