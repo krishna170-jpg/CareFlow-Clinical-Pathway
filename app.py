@@ -32,30 +32,61 @@ if not st.session_state.careflow_user:
     """
     <div style="
         text-align:center;
-        padding:clamp(28px,5vw,48px) 20px;
-        margin:10px 0 24px;
-        background:linear-gradient(135deg,#102746,#2463a5);
+        padding:clamp(32px,5vw,52px) 20px;
+        margin:10px 0 26px;
+        background:
+            radial-gradient(circle at top right,
+                rgba(45,212,191,0.22), transparent 42%),
+            linear-gradient(135deg,#0b1730 0%,#163b65 58%,#155e75 100%);
         border-radius:24px;
-        box-shadow:0 16px 38px rgba(16,39,70,0.20); border:1px solid rgba(255,255,255,.18);
+        box-shadow:0 18px 45px rgba(11,23,48,0.24);
+        border:1px solid rgba(255,255,255,0.16);
+        position:relative;
+        overflow:hidden;
     ">
         <div style="
-            font-size:clamp(34px,6vw,46px);
-            font-weight:800;
+            display:inline-block;
+            padding:8px 15px;
+            margin-bottom:15px;
+            background:rgba(255,255,255,0.10);
+            border:1px solid rgba(255,255,255,0.18);
+            border-radius:30px;
+            color:#99f6e4;
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:2px;
+        ">✦ CLINICAL INTELLIGENCE</div>
+
+        <div style="
+            font-size:clamp(36px,6vw,50px);
+            font-weight:850;
             color:#ffffff;
-            letter-spacing:-1px;
-        ">♥ CareFlow</div>
+            letter-spacing:-1.5px;
+            line-height:1.15;
+        ">♥ Care<span style="color:#5eead4;">Flow</span></div>
+
         <div style="
             color:#dbeafe;
-            font-size:17px;
+            font-size:clamp(15px,2.5vw,18px);
             font-weight:600;
-            margin-top:8px;
+            margin-top:12px;
         ">Clinical Pathway Process Mining</div>
+
         <div style="
-            color:#ffffff;
+            width:64px;
+            height:4px;
+            margin:20px auto;
+            background:linear-gradient(90deg,#5eead4,#60a5fa);
+            border-radius:10px;
+        "></div>
+
+        <div style="
+            color:#e2e8f0;
             font-size:14px;
-            margin-top:14px;
-            line-height:1.6;
-        ">Sign in to access your clinical analytics workspace.</div>
+            margin:0 auto;
+            max-width:420px;
+            line-height:1.8;
+        ">Sign in securely to access your clinical analytics workspace.</div>
     </div>
     """,
     unsafe_allow_html=True
