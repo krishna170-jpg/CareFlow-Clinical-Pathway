@@ -46,3 +46,16 @@ This repository should contain SQL models and documentation only. Do not commit 
 Purpose
 
 This project demonstrates skills in SQL analytics, data transformation, process mining concepts, data quality testing, and dashboard development.# CareFlow-Clinical-Pathway
+Dataset Engineering & Validation
+
+The CareFlow event-log dataset was reviewed for data quality, consistency, and process-mining readiness.
+
+Validation artifacts
+
+Validation Report: CareFlow_Validation_Report.docx
+
+Data Dictionary and Validation Results: CareFlow_Validation_and_Data_Dictionary.xlsx
+
+The review covers event-log structure, missing values, duplicate records, timestamp consistency, sequence continuity, and activity summaries.
+
+Important: The validation findings apply to the reviewed CSV file. They do not independently verify the BigQuery table or establish clinical correctness. Review potentially sensitive data before sharing files publicly.
