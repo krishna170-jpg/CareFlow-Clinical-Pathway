@@ -18,6 +18,33 @@ import pm4py
 
 REQUIRED_COLUMNS = ["case_id", "activity", "timestamp"]
 
+COLUMN_ALIASES = {
+    "case_id": ["case_id", "visit_id", "case", "caseid", "encounter_id"],
+    "activity": ["activity", "event", "activity_name", "event_name"],
+    "timestamp": ["timestamp", "time", "event_time", "datetime"],
+}
+
+
+def resolve_columns(df, overrides):
+    """Rename the file's own columns to case_id / activity / timestamp.
+    overrides: {"case_id": name or None, ...} from the command line."""
+    lower = {str(c).strip().lower(): c for c in df.columns}
+    rename = {}
+    for target, aliases in COLUMN_ALIASES.items():
+        chosen = overrides.get(target)
+        if chosen:
+            if chosen not in df.columns:
+                raise ValueError(f"Column '{chosen}' not found. Available: {list(df.columns)}")
+            source = chosen
+        else:
+            source = next((lower[a] for a in aliases if a in lower), None)
+        if source is not None and source != target:
+            rename[source] = target
+    if rename:
+        print("Using column mapping:", {v: k for k, v in rename.items()})
+    return df.rename(columns=rename)
+
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -33,6 +60,10 @@ def main():
         default="pm_outputs",
         help="Folder for generated outputs"
     )
+    parser.add_argument("--case-col", default=None, help="Case ID column (auto-detects case_id/visit_id)")
+    parser.add_argument("--activity-col", default=None, help="Activity column (auto-detects activity/event)")
+    parser.add_argument("--time-col", default=None, help="Timestamp column (auto-detects timestamp)")
+
     # Use parse_known_args() so that background Jupyter/Colab flags do not raise errors
     args, unknown = parser.parse_known_args()
 
@@ -47,6 +78,8 @@ def main():
         )
 
     df = pd.read_csv(input_path)
+    df = resolve_columns(df, {"case_id": args.case_col, "activity": args.activity_col,
+                              "timestamp": args.time_col})
 
     missing = [col for col in REQUIRED_COLUMNS if col not in df.columns]
     if missing:
