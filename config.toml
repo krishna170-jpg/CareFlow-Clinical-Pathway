@@ -1,0 +1,6 @@
+[theme]
+base = "light"
+primaryColor = "#E5322D"            # signal red: sliders, toggles, checkboxes, focus rings
+backgroundColor = "#E9ECF0"         # moonlit silver
+secondaryBackgroundColor = "#F7F8FA"
+textColor = "#1E2125"               # charcoal
