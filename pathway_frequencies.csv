@@ -1,0 +1,133 @@
+pathway,case_count,case_percent
+Triage -> Registration -> Assessment -> Discharge -> Left ED,9882,61.72
+Triage -> Registration -> Assessment -> Left ED -> Discharge,1074,6.71
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Discharge -> Left ED,940,5.87
+Triage -> Registration -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,647,4.04
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Discharge -> Left ED,525,3.28
+Triage -> Registration -> Assessment -> Consult Request -> Discharge -> Consult Arrival -> Left ED,424,2.65
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,352,2.2
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,262,1.64
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Consult Request -> Discharge -> Consult Arrival -> Left ED,211,1.32
+Triage -> Registration -> Assessment -> Consult Request -> Discharge -> Left ED,173,1.08
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Consult Request -> Discharge -> Consult Arrival -> Left ED,154,0.96
+Triage -> Registration -> Assessment -> Discharge,134,0.84
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Left ED -> Discharge,129,0.81
+Triage -> Registration -> Assessment -> Consult Request -> Consult Arrival -> Left ED -> Discharge,111,0.69
+Triage -> Registration -> Assessment -> Consult Request -> Left ED -> Discharge,108,0.67
+Triage -> Registration -> Discharge -> Assessment -> Left ED,105,0.66
+Triage -> Registration -> Left ED -> Discharge,90,0.56
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Left ED -> Discharge,76,0.47
+Ambulance Transfer -> Ambulance Arrival -> Triage -> Registration -> Assessment -> Discharge -> Left ED,44,0.27
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Consult Request -> Discharge -> Left ED,43,0.27
+Triage -> Ambulance Arrival -> Ambulance Transfer -> Registration -> Assessment -> Discharge -> Left ED,34,0.21
+Triage -> Assessment -> Registration -> Discharge -> Left ED,34,0.21
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Consult Request -> Discharge -> Left ED,29,0.18
+Triage -> Registration -> Discharge,28,0.17
+Triage -> Ambulance Arrival -> Registration -> Ambulance Transfer -> Assessment -> Discharge -> Left ED,26,0.16
+Triage -> Registration -> Discharge -> Left ED,18,0.11
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Consult Request -> Left ED -> Discharge,18,0.11
+Triage -> Ambulance Arrival -> Ambulance Transfer -> Registration -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,16,0.1
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Consult Request -> Consult Arrival -> Left ED -> Discharge,15,0.09
+Ambulance Arrival -> Ambulance Transfer -> Triage -> Registration -> Assessment -> Discharge -> Left ED,13,0.08
+Assessment -> Triage -> Registration -> Discharge -> Left ED,13,0.08
+Ambulance Arrival -> Triage -> Registration -> Assessment -> Ambulance Transfer -> Discharge -> Left ED,12,0.07
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Discharge,11,0.07
+Ambulance Arrival -> Triage -> Registration -> Assessment -> Ambulance Transfer -> Consult Request -> Discharge -> Consult Arrival -> Left ED,11,0.07
+Ambulance Arrival -> Triage -> Registration -> Assessment -> Ambulance Transfer -> Consult Request -> Consult Arrival -> Discharge -> Left ED,10,0.06
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Left ED -> Discharge,9,0.06
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Consult Request -> Consult Arrival -> Left ED -> Discharge,9,0.06
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Assessment -> Registration -> Discharge -> Left ED,9,0.06
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Consult Request -> Left ED -> Discharge,9,0.06
+Triage -> Ambulance Arrival -> Ambulance Transfer -> Registration -> Assessment -> Left ED -> Discharge,8,0.05
+Triage -> Ambulance Arrival -> Registration -> Ambulance Transfer -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,8,0.05
+Triage -> Ambulance Arrival -> Ambulance Transfer -> Registration -> Assessment -> Consult Request -> Discharge -> Consult Arrival -> Left ED,8,0.05
+Triage -> Registration -> Left ED -> Discharge -> Assessment,7,0.04
+Ambulance Arrival -> Ambulance Transfer -> Triage -> Registration -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,7,0.04
+Triage -> Assessment -> Registration -> Left ED -> Discharge,6,0.04
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Left ED -> Discharge,6,0.04
+Ambulance Arrival -> Ambulance Transfer -> Triage -> Registration -> Assessment -> Consult Request -> Discharge -> Consult Arrival -> Left ED,6,0.04
+Triage -> Ambulance Arrival -> Registration -> Ambulance Transfer -> Assessment -> Left ED -> Discharge,6,0.04
+Ambulance Arrival -> Ambulance Transfer -> Triage -> Registration -> Assessment -> Left ED -> Discharge,6,0.04
+Triage -> Ambulance Arrival -> Registration -> Ambulance Transfer -> Assessment -> Consult Request -> Discharge -> Consult Arrival -> Left ED,5,0.03
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Assessment -> Registration -> Consult Request -> Consult Arrival -> Discharge -> Left ED,5,0.03
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Assessment -> Registration -> Consult Request -> Discharge -> Consult Arrival -> Left ED,4,0.02
+Triage -> Registration -> Assessment -> Discharge -> Consult Request -> Left ED,4,0.02
+Triage -> Assessment -> Registration -> Consult Request -> Consult Arrival -> Discharge -> Left ED,4,0.02
+Ambulance Arrival -> Triage -> Assessment -> Registration -> Ambulance Transfer -> Discharge -> Left ED,4,0.02
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Discharge,4,0.02
+Triage -> Registration -> Consult Request -> Assessment -> Discharge -> Left ED,4,0.02
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Discharge,3,0.02
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Discharge -> Consult Request -> Left ED,3,0.02
+Triage -> Registration -> Assessment -> Discharge -> Consult Request -> Consult Arrival -> Left ED,3,0.02
+Ambulance Arrival -> Triage -> Assessment -> Ambulance Transfer -> Registration -> Discharge -> Left ED,3,0.02
+Ambulance Arrival -> Ambulance Transfer -> Triage -> Registration -> Assessment -> Consult Request -> Consult Arrival -> Left ED -> Discharge,2,0.01
+Triage -> Consult Request -> Registration -> Assessment -> Consult Arrival -> Discharge -> Left ED,2,0.01
+Ambulance Arrival -> Triage -> Registration -> Assessment -> Ambulance Transfer -> Consult Request -> Left ED -> Discharge,2,0.01
+Ambulance Arrival -> Triage -> Assessment -> Registration -> Ambulance Transfer -> Consult Request -> Consult Arrival -> Discharge -> Left ED,2,0.01
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Discharge -> Consult Request -> Consult Arrival -> Left ED,2,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Assessment -> Registration -> Left ED -> Discharge,2,0.01
+Ambulance Arrival -> Registration -> Triage -> Ambulance Transfer -> Assessment -> Discharge -> Left ED,2,0.01
+Ambulance Arrival -> Triage -> Assessment -> Ambulance Transfer -> Registration -> Consult Request -> Discharge -> Consult Arrival -> Left ED,2,0.01
+Triage -> Ambulance Transfer -> Ambulance Arrival -> Registration -> Assessment -> Discharge -> Left ED,2,0.01
+Triage -> Registration -> Consult Request -> Assessment -> Left ED -> Discharge,2,0.01
+Triage -> Assessment -> Registration -> Consult Request -> Discharge -> Consult Arrival -> Left ED,2,0.01
+Triage -> Assessment -> Registration -> Consult Request -> Left ED -> Discharge,2,0.01
+Triage -> Registration -> Assessment -> Consult Request -> Discharge -> Left ED -> Consult Arrival,2,0.01
+Assessment -> Triage -> Registration -> Left ED -> Discharge,2,0.01
+Triage -> Ambulance Arrival -> Ambulance Transfer -> Registration -> Assessment -> Discharge,2,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Discharge -> Assessment -> Left ED,2,0.01
+Triage -> Ambulance Transfer -> Registration -> Ambulance Arrival -> Assessment -> Discharge -> Left ED,2,0.01
+Ambulance Arrival -> Triage -> Assessment -> Ambulance Transfer -> Registration -> Consult Request -> Consult Arrival -> Discharge -> Left ED,2,0.01
+Ambulance Arrival -> Ambulance Transfer -> Assessment -> Triage -> Registration -> Consult Request -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Consult Request -> Assessment -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Assessment -> Registration -> Ambulance Transfer -> Consult Request -> Left ED -> Discharge,1,0.01
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Consult Request -> Assessment -> Consult Arrival -> Left ED -> Discharge,1,0.01
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Consult Request -> Assessment -> Discharge -> Consult Arrival -> Left ED,1,0.01
+Ambulance Arrival -> Ambulance Transfer -> Triage -> Registration -> Assessment -> Consult Request -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Assessment -> Registration -> Consult Request -> Left ED -> Discharge,1,0.01
+Ambulance Arrival -> Registration -> Triage -> Discharge -> Ambulance Transfer -> Assessment -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Consult Request -> Registration -> Assessment -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Ambulance Transfer -> Triage -> Registration -> Left ED -> Discharge,1,0.01
+Ambulance Arrival -> Assessment -> Triage -> Registration -> Ambulance Transfer -> Consult Request -> Discharge -> Consult Arrival -> Left ED,1,0.01
+Ambulance Arrival -> Registration -> Triage -> Ambulance Transfer -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Registration -> Triage -> Ambulance Transfer -> Assessment -> Left ED -> Discharge,1,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Discharge -> Consult Request -> Consult Arrival -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Assessment -> Registration -> Consult Request -> Consult Arrival -> Left ED -> Discharge,1,0.01
+Ambulance Arrival -> Triage -> Assessment -> Ambulance Transfer -> Registration -> Left ED -> Discharge,1,0.01
+Ambulance Arrival -> Triage -> Registration -> Ambulance Transfer -> Assessment -> Consult Request -> Discharge -> Left ED -> Consult Arrival,1,0.01
+Ambulance Arrival -> Triage -> Consult Request -> Registration -> Ambulance Transfer -> Assessment -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Consult Request -> Registration -> Assessment -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Assessment -> Discharge -> Consult Request -> Left ED -> Consult Arrival,1,0.01
+Ambulance Arrival -> Triage -> Ambulance Transfer -> Registration -> Discharge -> Left ED,1,0.01
+Ambulance Transfer -> Ambulance Arrival -> Triage -> Registration -> Assessment -> Consult Request -> Discharge -> Consult Arrival -> Left ED,1,0.01
+Ambulance Transfer -> Ambulance Arrival -> Triage -> Registration -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Registration -> Left ED -> Discharge -> Ambulance Transfer,1,0.01
+Ambulance Arrival -> Triage -> Registration -> Discharge -> Assessment -> Ambulance Transfer -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Registration -> Assessment -> Consult Request -> Ambulance Transfer -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Ambulance Arrival -> Triage -> Registration -> Assessment -> Ambulance Transfer -> Discharge,1,0.01
+Triage -> Ambulance Transfer -> Registration -> Ambulance Arrival -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Ambulance Transfer -> Ambulance Arrival -> Triage -> Registration -> Assessment -> Discharge,1,0.01
+Assessment -> Triage -> Registration -> Discharge -> Left ED -> Consult Request -> Consult Arrival,1,0.01
+Ambulance Transfer -> Triage -> Ambulance Arrival -> Registration -> Assessment -> Discharge -> Left ED,1,0.01
+Left ED -> Discharge -> Triage -> Registration,1,0.01
+Left ED -> Triage -> Registration -> Assessment -> Discharge,1,0.01
+Registration -> Triage -> Assessment -> Consult Request -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Registration -> Left ED -> Discharge,1,0.01
+Registration -> Triage -> Left ED -> Discharge,1,0.01
+Registration -> Triage -> Assessment -> Discharge -> Left ED,1,0.01
+Ambulance Transfer -> Ambulance Arrival -> Triage -> Registration -> Assessment -> Left ED -> Discharge,1,0.01
+Triage -> Ambulance Arrival -> Registration -> Assessment -> Ambulance Transfer -> Discharge -> Left ED,1,0.01
+Triage -> Ambulance Arrival -> Registration -> Assessment -> Ambulance Transfer -> Consult Request -> Discharge -> Consult Arrival -> Left ED,1,0.01
+Triage -> Ambulance Arrival -> Registration -> Ambulance Transfer -> Assessment -> Discharge,1,0.01
+Triage -> Ambulance Arrival -> Assessment -> Registration -> Ambulance Transfer -> Consult Request -> Discharge -> Consult Arrival -> Left ED,1,0.01
+Triage -> Ambulance Arrival -> Assessment -> Ambulance Transfer -> Registration -> Discharge,1,0.01
+Ambulance Transfer -> Ambulance Arrival -> Triage -> Registration -> Left ED -> Discharge,1,0.01
+Triage -> Consult Request -> Registration -> Assessment -> Left ED -> Discharge,1,0.01
+Triage -> Registration -> Ambulance Arrival -> Assessment -> Ambulance Transfer -> Consult Request -> Consult Arrival -> Discharge -> Left ED,1,0.01
+Triage -> Assessment -> Registration -> Consult Request -> Discharge -> Left ED,1,0.01
+Triage -> Consult Request -> Registration -> Assessment -> Discharge -> Left ED,1,0.01
+Triage -> Registration -> Assessment -> Discharge -> Left ED -> Consult Request -> Consult Arrival,1,0.01
+Triage -> Registration -> Consult Request -> Assessment -> Discharge -> Consult Arrival -> Left ED,1,0.01
+Triage -> Registration -> Assessment -> Left ED -> Discharge -> Consult Request -> Consult Arrival,1,0.01
+Triage -> Registration -> Discharge -> Assessment -> Consult Request -> Left ED,1,0.01
+Triage -> Registration -> Consult Request -> Discharge -> Left ED,1,0.01
