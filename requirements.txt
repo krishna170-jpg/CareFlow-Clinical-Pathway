@@ -4,3 +4,4 @@ plotly>=5.20
 
 supabase
 google-cloud-bigquery
+scikit-learn
