@@ -1,7 +1,9 @@
-streamlit>=1.36
-pandas>=2.0
-plotly>=5.20
-
-supabase
-google-cloud-bigquery
+# Merge with any packages your project already lists (for example whatever careflow_pm.py imports).
+# Top navigation needs Streamlit 1.46 or newer. After it works, pin the exact version you tested with
+# (run `pip show streamlit`), for example: streamlit==1.50.0
+streamlit>=1.46
+pandas
+numpy
+plotly
 scikit-learn
+supabase
