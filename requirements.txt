@@ -7,3 +7,6 @@ numpy
 plotly
 scikit-learn
 supabase
+pandas>=2.0
+pm4py>=2.7
+matplotlib>=3.7
